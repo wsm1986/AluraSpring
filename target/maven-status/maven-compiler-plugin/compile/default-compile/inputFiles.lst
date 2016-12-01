@@ -1,9 +1,10 @@
+/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/validation/ProdutoValidation.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/daos/ProdutoDAO.java
+/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Produto.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/produto/ProdutoController.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/TipoPreco.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/HomeController.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/ServletSpringMvc.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/JPAConfiguration.java
-/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Produtos.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Preco.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/AppWebConfiguration.java

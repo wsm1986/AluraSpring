@@ -1,0 +1,6 @@
+127.0.0.1 - - [01/Dec/2016:21:24:11 -0200] "GET /casadocodigo/produtos/form HTTP/1.1" 200 1035 http-bio-8080-exec-1 122
+127.0.0.1 - - [01/Dec/2016:21:24:11 -0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+127.0.0.1 - - [01/Dec/2016:21:24:13 -0200] "POST /casadocodigo/produtos HTTP/1.1" 200 555 http-bio-8080-exec-4 57
+127.0.0.1 - - [01/Dec/2016:21:28:46 -0200] "POST /casadocodigo/produtos HTTP/1.1" 302 - http-bio-8080-exec-1 219
+127.0.0.1 - - [01/Dec/2016:21:28:46 -0200] "GET /casadocodigo/produtos HTTP/1.1" 200 555 http-bio-8080-exec-2 69
+127.0.0.1 - - [01/Dec/2016:21:28:49 -0200] "GET /casadocodigo/produtos HTTP/1.1" 200 555 http-bio-8080-exec-3 13
