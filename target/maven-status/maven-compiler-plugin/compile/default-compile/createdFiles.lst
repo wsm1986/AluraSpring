@@ -1,6 +1,10 @@
-br/com/casadocodigo/loja/models/TipoPreco.class
 br/com/casadocodigo/loja/controllers/HomeController.class
+<<<<<<< HEAD
+=======
+br/com/casadocodigo/loja/models/TipoPreco.class
+>>>>>>> 3273d8642708d894a1b58eff06107162d1f15572
 br/com/casadocodigo/loja/controllers/produto/ProdutoController.class
+br/com/casadocodigo/loja/models/Produtos.class
 br/com/casadocodigo/loja/daos/ProdutoDAO.class
 br/com/casadocodigo/loja/conf/AppWebConfiguration.class
 br/com/casadocodigo/loja/conf/ServletSpringMvc.class

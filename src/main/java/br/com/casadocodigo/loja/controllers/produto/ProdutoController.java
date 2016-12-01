@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -17,6 +18,7 @@ import br.com.casadocodigo.loja.models.TipoPreco;
 import br.com.casadocodigo.loja.validation.ProdutoValidation;
 
 @Controller
+@RequestMapping("/produtos")
 public class ProdutoController {
 
 	@Autowired
@@ -28,7 +30,7 @@ public class ProdutoController {
 		binder.addValidators(new ProdutoValidation());
 	}
 
-	@RequestMapping("/produtos/form")
+	@RequestMapping("/form")
 	public ModelAndView index() {
 		System.out.println("Cadastro Produto");
 		ModelAndView model = new ModelAndView("produtos/form");
@@ -51,5 +53,21 @@ public class ProdutoController {
 				"Produto cadastrado com sucesso!");
 
 		return new ModelAndView("redirect:produtos");
+	}
+
+	@RequestMapping(method = RequestMethod.POST)
+	public String gravar(Produto produtos, RedirectAttributes redirectAttributes) {
+		System.out.println(produtos.toString());
+		redirectAttributes.addFlashAttribute("sucesso",
+				"Produto cadastrado com sucesso!");
+		dao.gravar(produtos);
+		return "redirect:produtos";
+	}
+
+	@RequestMapping(method = RequestMethod.GET)
+	public ModelAndView lista() {
+		ModelAndView model = new ModelAndView("produtos/lista");
+		model.addObject("produtos", dao.findAll());
+		return model;
 	}
 }
