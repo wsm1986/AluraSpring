@@ -21,6 +21,6 @@ public class ProdutoDAO {
 		manager.persist(produto);
 	}
 	public List<Produto> findAll(){
-		return manager.createQuery("Select p from Produtos p", Produto.class).getResultList();
+		return manager.createQuery("Select p from Produto p", Produto.class).getResultList();
 	}
 }

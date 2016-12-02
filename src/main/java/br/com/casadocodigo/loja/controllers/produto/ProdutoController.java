@@ -31,20 +31,20 @@ public class ProdutoController {
 	}
 
 	@RequestMapping("/form")
-	public ModelAndView index() {
+	public ModelAndView form(Produto produto) {
 		System.out.println("Cadastro Produto");
 		ModelAndView model = new ModelAndView("produtos/form");
 		model.addObject("tipos", TipoPreco.values());
 		return model;
 	}
 
-	@RequestMapping("/produtos")
+	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView grava(@Valid Produto produto, BindingResult result,
 			RedirectAttributes redirectAttributes) {
 
 		if (result.hasErrors()) {
-			// return form();
-			return new ModelAndView("produtos/form");
+			 return form(produto);
+			//return new ModelAndView("produtos/form");
 		}
 
 		dao.gravar(produto);
@@ -53,15 +53,6 @@ public class ProdutoController {
 				"Produto cadastrado com sucesso!");
 
 		return new ModelAndView("redirect:produtos");
-	}
-
-	@RequestMapping(method = RequestMethod.POST)
-	public String gravar(Produto produtos, RedirectAttributes redirectAttributes) {
-		System.out.println(produtos.toString());
-		redirectAttributes.addFlashAttribute("sucesso",
-				"Produto cadastrado com sucesso!");
-		dao.gravar(produtos);
-		return "redirect:produtos";
 	}
 
 	@RequestMapping(method = RequestMethod.GET)
