@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,7 +26,7 @@ public class ProdutoController {
 
 	@Autowired
 	private ProdutoDAO dao;
-	
+
 	@Autowired
 	private FileSaver savar;
 
@@ -51,10 +52,10 @@ public class ProdutoController {
 			return form(produto);
 			// return new ModelAndView("produtos/form");
 		}
-		
+
 		String sumarioPath = savar.write("arquivos-sumario", sumario);
 
-        produto.setSumarioPath(sumarioPath);
+		produto.setSumarioPath(sumarioPath);
 
 		System.out.println(sumario.getOriginalFilename());
 
@@ -71,4 +72,12 @@ public class ProdutoController {
 		model.addObject("produtos", dao.findAll());
 		return model;
 	}
+
+	@RequestMapping("/detalhe/{id}")
+	public ModelAndView detalhe(@PathVariable("id") Integer id) {
+		ModelAndView model = new ModelAndView("produtos/detalhe");
+		model.addObject("produto", dao.findById(id));
+		return model;
+	}
+
 }

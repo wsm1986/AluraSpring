@@ -20,7 +20,15 @@ public class ProdutoDAO {
 	public void gravar(Produto produto) {
 		manager.persist(produto);
 	}
-	public List<Produto> findAll(){
+
+	public List<Produto> findAll() {
 		return manager.createQuery("Select p from Produto p", Produto.class).getResultList();
+	}
+
+	public Produto findById(Integer id) {
+		// return manager.find(Produto.class, id);
+		return manager.createQuery("select distinct(p) from Produto p join fetch p.precos precos where p.id = :id",
+				Produto.class).setParameter("id", id).getSingleResult();
+
 	}
 }
