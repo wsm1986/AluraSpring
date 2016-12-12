@@ -1,5 +1,8 @@
 package br.com.casadocodigo.loja.controllers.produto;
 
+import java.io.IOException;
+
+import javax.servlet.ServletException;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,16 +40,22 @@ public class ProdutoController {
 	}
 
 	@RequestMapping("/form")
-	public ModelAndView form(Produto produto) {
+	public ModelAndView form(Produto produto) throws IOException, ServletException {
 		System.out.println("Cadastro Produto");
 		ModelAndView model = new ModelAndView("produtos/form");
 		model.addObject("tipos", TipoPreco.values());
 		return model;
 	}
+	@RequestMapping("/teste")
+	public void teste(Produto produto) throws IOException, ServletException {
+		savar.gerarZipRecursivo("/home/dbaldani/AZUL/SchemaCentric");
+		
+	}
+
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView grava(MultipartFile sumario, @Valid Produto produto, BindingResult result,
-			RedirectAttributes redirectAttributes) {
+			RedirectAttributes redirectAttributes) throws IOException, ServletException {
 
 		if (result.hasErrors()) {
 			return form(produto);
@@ -55,6 +64,7 @@ public class ProdutoController {
 
 		String sumarioPath = savar.write("arquivos-sumario", sumario);
 
+		
 		produto.setSumarioPath(sumarioPath);
 
 		System.out.println(sumario.getOriginalFilename());

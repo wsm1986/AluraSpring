@@ -49,7 +49,7 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="/cart" rel="nofollow">Carrinho</a></li>
+						<li><a href="/cart" rel="nofollow">Carrinho (${carrinhoCompras.quantidade}) </a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 
@@ -97,20 +97,22 @@
 	
 	  
 	  <section class="buy-options clearfix">  
-	  <form action="/cart/add" method="post" class="container">
-	    <ul id="variants" class="clearfix">
-	    	  <li class="buy-option">
-	            <input type="radio" name="id" class="variant-radio" id="product-variant-9720393823" value="9720393823"  checked="checked"  />
-	            <label  class="variant-label" for="product-variant-9720393823">
-	              E-book + Impresso 
-	            </label>
-	            <small class="compare-at-price">R$ 39,90</small>
-	            <p class="variant-price">R$ 29,90</p>
-	          </li>           
-	    </ul>
-	    <button type="submit" class="submit-image icon-basket-alt" alt="Compre Agora" title="Compre Agora"></button>
-	    
-	  </form>
+	 <form action='<c:url value="/carrinho/add" />' method="post" class="container">
+		    <ul id="variants" class="clearfix">
+		        <input type="hidden" name="produtoId" value="${produto.id}" />
+		        <c:forEach items="${produto.precos}" var="preco">
+		          <li class="buy-option">
+		            <input type="radio" name="tipo" class="variant-radio" id="tipo" value="${preco.tipo}"  checked="checked"  />
+		            <label  class="variant-label">
+		              ${preco.tipo}
+		            </label>
+		            <small class="compare-at-price">R$ 39,90</small>
+		            <p class="variant-price">${preco.valor}</p>
+		          </li>
+		        </c:forEach>           
+		    </ul>
+		    <button type="submit" class="submit-image icon-basket-alt" alt="Compre Agora" title="Compre Agora${produto.titulo}"></button>
+		</form>
 	  
 	</section>
 	  
