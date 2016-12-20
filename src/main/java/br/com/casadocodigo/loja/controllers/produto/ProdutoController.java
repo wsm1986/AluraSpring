@@ -54,9 +54,10 @@ public class ProdutoController {
 
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView grava(MultipartFile sumario, @Valid Produto produto, BindingResult result,
+	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result,
 			RedirectAttributes redirectAttributes) throws IOException, ServletException {
 
+		 System.out.println(sumario.getOriginalFilename());
 		if (result.hasErrors()) {
 			return form(produto);
 			// return new ModelAndView("produtos/form");
