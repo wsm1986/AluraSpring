@@ -9,4 +9,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class PagamentoController {
 
 	public ModelAndView finalizar(){
+	return null;
+	}
 }
