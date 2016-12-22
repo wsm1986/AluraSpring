@@ -10,6 +10,7 @@
     Casa do código</title>
     
     <div> ${sucesso}</div>
+    <div> ${falha}</div>
 </head>
 <body>
     <table>

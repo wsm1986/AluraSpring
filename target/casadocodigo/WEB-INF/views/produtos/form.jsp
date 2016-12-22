@@ -13,8 +13,7 @@
 <body>
 
 
-   <form:form action="${s:mvcUrl('PC#grava').build()}" method="post"
-        commandName="produto" enctype="multipart/form-data">
+   <form:form action="${ s:mvcUrl('PC#gravar').build() }" method="post" commandName="produto" enctype="multipart/form-data">
 
         <div>
             <label>Título</label>
@@ -25,7 +24,7 @@
             <label>Descrição</label>
             <form:textarea rows="10" cols="20" path="descricao" />
             <form:errors path="descricao" />
-        </div>name
+        </div>
 
         <div>
             <label>Páginas</label>

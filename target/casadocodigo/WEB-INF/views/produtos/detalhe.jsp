@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +50,7 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="/cart" rel="nofollow">Carrinho (${carrinhoCompras.quantidade}) </a></li>
+						<li><a href="${s:mvcUrl('CCC#itens').build() }" rel="nofollow">Seu Carrinho (${carrinhoCompras.quantidade })</a></li>
 
 						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 
@@ -102,7 +103,7 @@
 		        <input type="hidden" name="produtoId" value="${produto.id}" />
 		        <c:forEach items="${produto.precos}" var="preco">
 		          <li class="buy-option">
-		            <input type="radio" name="tipo" class="variant-radio" id="tipo" value="${preco.tipo}"  checked="checked"  />
+		            <input type="radio" name="tipoPreco" class="variant-radio" id="tipo" value="${preco.tipo}"  checked="checked"  />
 		            <label  class="variant-label">
 		              ${preco.tipo}
 		            </label>

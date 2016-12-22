@@ -16,32 +16,38 @@ import br.com.casadocodigo.loja.models.TipoPreco;
 
 @Controller
 @RequestMapping("/carrinho")
-@Scope(value=WebApplicationContext.SCOPE_REQUEST)
+@Scope(value = WebApplicationContext.SCOPE_REQUEST)
 public class CarrinhoComprasController {
 
-    @Autowired
-    private ProdutoDAO produtoDao;
+	@Autowired
+	private ProdutoDAO produtoDao;
 
-    @Autowired
-    private CarrinhoCompras carrinho;
+	@Autowired
+	private CarrinhoCompras carrinho;
 
-    @RequestMapping("/add")
-    public ModelAndView add(Integer produtoId, TipoPreco tipoPreco) {
-        ModelAndView modelAndView = new ModelAndView("redirect:/carrinho");
-        CarrinhoItem carrinhoItem = criaItem(produtoId,tipoPreco);
-        carrinho.add(carrinhoItem);
-        return modelAndView;   
-    }
+	@RequestMapping("/add")
+	public ModelAndView add(Integer produtoId, TipoPreco tipoPreco) {
+		ModelAndView modelAndView = new ModelAndView("redirect:/carrinho");
+		CarrinhoItem carrinhoItem = criaItem(produtoId, tipoPreco);
+		carrinho.add(carrinhoItem);
+		return modelAndView;
+	}
 
-    private CarrinhoItem criaItem(Integer produtoId, TipoPreco tipoPreco) {
-        Produto produto = produtoDao.findById(produtoId);
-        CarrinhoItem carrinhoItem = new CarrinhoItem(produto,tipoPreco);
-        return carrinhoItem;
-    }
-    
+	private CarrinhoItem criaItem(Integer produtoId, TipoPreco tipoPreco) {
+		Produto produto = produtoDao.findById(produtoId);
+		CarrinhoItem carrinhoItem = new CarrinhoItem(produto, tipoPreco);
+		return carrinhoItem;
+	}
+
 	@RequestMapping(method = RequestMethod.GET)
-    public ModelAndView itens() {
-        ModelAndView modelAndView = new ModelAndView("carrinho/itens");
-        return modelAndView;   
-    }
+	public ModelAndView itens() {
+		ModelAndView modelAndView = new ModelAndView("carrinho/itens");
+		return modelAndView;
+	}
+
+	@RequestMapping("/remover")
+	public ModelAndView remover(Integer produtoId, TipoPreco tipoPreco) {
+		carrinho.remover(produtoId, tipoPreco);
+		return new ModelAndView("redirect:/carrinho");
+	}
 }
