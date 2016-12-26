@@ -5,11 +5,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
+<link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+<link rel="stylesheet" href="resources/css/bootstrap-theme.min.css" />
+
 <meta charset=UTF-8>
 <title>Livros de java, Android, Iphone, PHP, Ruby e muito mais -
     Casa do código</title>
     
     <div> ${sucesso}</div>
+    <div> ${falha}</div>
 </head>
 <body>
     <table>

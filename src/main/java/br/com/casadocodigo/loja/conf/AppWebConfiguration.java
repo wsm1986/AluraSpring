@@ -30,7 +30,9 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 		InternalResourceViewResolver resolve = new InternalResourceViewResolver();
 		resolve.setPrefix("/WEB-INF/views/");
 		resolve.setSuffix(".jsp");
-	    resolve.setExposedContextBeanNames("carrinhoCompras"); // Disponibiliza o Bean para o jsp
+		resolve.setExposedContextBeanNames("carrinhoCompras"); // Disponibiliza
+																// o Bean para o
+																// jsp
 		return resolve;
 	}
 
@@ -65,9 +67,9 @@ public class AppWebConfiguration extends WebMvcConfigurerAdapter {
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
-	
-    @Bean
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
+
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 }
