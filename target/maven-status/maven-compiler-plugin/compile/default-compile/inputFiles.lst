@@ -2,6 +2,7 @@
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/HomeController.java
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/produto/ProdutoController.java
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/TipoPreco.java
+/home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/JsonViewResolver.java
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Produto.java
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/JPAConfiguration.java
 /home/dbaldani/workspaceAluraSprinng/casadocodigo/src/main/java/br/com/casadocodigo/loja/daos/ProdutoDAO.java

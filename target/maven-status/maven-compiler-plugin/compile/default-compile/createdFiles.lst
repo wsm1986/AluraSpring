@@ -2,6 +2,7 @@ br/com/casadocodigo/loja/models/TipoPreco.class
 br/com/casadocodigo/loja/controllers/produto/ProdutoController.class
 br/com/casadocodigo/loja/models/CarrinhoCompras.class
 br/com/casadocodigo/loja/validation/ProdutoValidation.class
+br/com/casadocodigo/loja/conf/JsonViewResolver.class
 br/com/casadocodigo/loja/conf/AppWebConfiguration.class
 br/com/casadocodigo/loja/conf/ServletSpringMvc.class
 br/com/casadocodigo/loja/controllers/PagamentoController.class
