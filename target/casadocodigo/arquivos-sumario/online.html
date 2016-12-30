@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR" th:fragment="page">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <title>UOLDIVEO - "Pagamentos"</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" th:href="@{/v1/checkout/css/682b1628-22e5-4904-aaf6-7afeaab9b1d4?templateName=base-template}" /> 
+    <style>.nav .branch i.entypo { line-height: 100px; } .error:after, .success:after { top: 25px; }</style>
+  </head>
+
+    <header>
+      <section class="pc-logos">
+        <div >
+          <div class="row">
+            <div class="col-md-10">
+              <img id="pcuoldiveo-logo" th:src="@{/v1/checkout/image/d8325020-681c-4b6e-b460-11bd701999b1}" alt="UOL DIVEO" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+     <body>  
+        <div th:include="this :: content" th:remove="tag" />
+      </body>
+    <footer>
+      <span class="copyright">© <strong>2014</strong> - UOLDIVEO. Todos os direitos reservados.</span>
+      <a href="http://www.uoldiveo.com.br/">www.uoldiveo.com.br</a>
+    </footer>
+</html>
+
+

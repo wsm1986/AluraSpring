@@ -1,7 +1,10 @@
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/validation/ProdutoValidation.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/infra/FileSaver.java
+/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/DadosPagamento.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/daos/ProdutoDAO.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Produto.java
+/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/PagamentoController.java
+/home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/JsonViewResolver.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/conf/ServletSpringMvc.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/models/Preco.java
 /home/wellington/workspaceAluraSpring/casadocodigo/src/main/java/br/com/casadocodigo/loja/controllers/produto/ProdutoController.java

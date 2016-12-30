@@ -1,0 +1,12 @@
+127.0.0.1 - - [27/Dec/2016:10:44:46 -0200] "GET /casadocodigo/produtos/1 HTTP/1.1" 404 997 http-bio-8080-exec-1 33
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/produtos/detalhe/1 HTTP/1.1" 200 8605 http-bio-8080-exec-7 978
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/museo-500.woff HTTP/1.1" 404 1033 http-bio-8080-exec-8 3
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/fontello.woff?3398089 HTTP/1.1" 404 1031 http-bio-8080-exec-3 2
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/museo-700.woff HTTP/1.1" 404 1033 http-bio-8080-exec-2 4
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/museo-700.ttf HTTP/1.1" 404 1031 http-bio-8080-exec-9 2
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/fontello.ttf?3398089 HTTP/1.1" 404 1029 http-bio-8080-exec-10 2
+127.0.0.1 - - [27/Dec/2016:10:44:50 -0200] "GET /casadocodigo/resources/css/museo-500.ttf HTTP/1.1" 404 1031 http-bio-8080-exec-11 3
+127.0.0.1 - - [27/Dec/2016:10:44:57 -0200] "GET /casadocodigo/produtos/detalhe/1.json HTTP/1.1" 200 396 http-bio-8080-exec-11 85
+127.0.0.1 - - [27/Dec/2016:10:45:01 -0200] "GET /casadocodigo/produtos/detalhe/1.json HTTP/1.1" 200 396 http-bio-8080-exec-11 17
+127.0.0.1 - - [27/Dec/2016:10:45:13 -0200] "GET /casadocodigo/produtos/detalhe/1.json HTTP/1.1" 200 396 http-bio-8080-exec-11 12
+127.0.0.1 - - [27/Dec/2016:10:45:21 -0200] "GET /casadocodigo/produtos/detalhe/1 HTTP/1.1" 200 8605 http-bio-8080-exec-11 13
