@@ -1,4 +1,0 @@
-127.0.0.1 - - [29/Dec/2016:22:51:26 -0200] "GET /casadocodigo/produtos/form HTTP/1.1" 200 3558 http-bio-8080-exec-1 1729
-127.0.0.1 - - [29/Dec/2016:22:51:26 -0200] "GET /casadocodigo/resources/css;jsessionid=D20C3CBD3D2D227A9019B5EE9BAFDD20/bootstrap-theme.min.css HTTP/1.1" 200 23409 http-bio-8080-exec-2 10
-127.0.0.1 - - [29/Dec/2016:22:51:26 -0200] "GET /casadocodigo/resources/css;jsessionid=D20C3CBD3D2D227A9019B5EE9BAFDD20/bootstrap.min.css HTTP/1.1" 200 121200 http-bio-8080-exec-3 17
-127.0.0.1 - - [29/Dec/2016:22:51:26 -0200] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-5 0

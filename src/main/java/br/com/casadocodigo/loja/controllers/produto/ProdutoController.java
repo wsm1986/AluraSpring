@@ -42,25 +42,27 @@ public class ProdutoController {
 	}
 
 	@RequestMapping("/form")
-	public ModelAndView form(Produto produto) throws IOException, ServletException {
+	public ModelAndView form(Produto produto) throws IOException,
+			ServletException {
 		System.out.println("Cadastro Produto");
 		ModelAndView model = new ModelAndView("produtos/form");
 		model.addObject("tipos", TipoPreco.values());
 		return model;
 	}
+
 	@RequestMapping("/teste")
 	public void teste(Produto produto) throws IOException, ServletException {
 		savar.gerarZipRecursivo("/home/dbaldani/AZUL/SchemaCentric");
-		
+
 	}
 
-
 	@RequestMapping(method = RequestMethod.POST)
-	@CacheEvict(value="produtoHome", allEntries=true) 
-	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto, BindingResult result,
-			RedirectAttributes redirectAttributes) throws IOException, ServletException {
+	@CacheEvict(value = "produtoHome", allEntries = true)
+	public ModelAndView gravar(MultipartFile sumario, @Valid Produto produto,
+			BindingResult result, RedirectAttributes redirectAttributes)
+			throws IOException, ServletException {
 
-		 System.out.println(sumario.getOriginalFilename());
+		System.out.println(sumario.getOriginalFilename());
 		if (result.hasErrors()) {
 			return form(produto);
 			// return new ModelAndView("produtos/form");
@@ -68,14 +70,14 @@ public class ProdutoController {
 
 		String sumarioPath = savar.write("arquivos-sumario", sumario);
 
-		
 		produto.setSumarioPath(sumarioPath);
 
 		System.out.println(sumario.getOriginalFilename());
 
 		dao.gravar(produto);
 
-		redirectAttributes.addFlashAttribute("sucesso", "Produto cadastrado com sucesso!");
+		redirectAttributes.addFlashAttribute("sucesso",
+				"Produto cadastrado com sucesso!");
 
 		return new ModelAndView("redirect:produtos");
 	}
@@ -93,13 +95,14 @@ public class ProdutoController {
 		model.addObject("produto", dao.findById(id));
 		return model;
 	}
-	
-	/* Retorno Json
-	@RequestMapping("/{id}")
-	@ResponseBody
-	public Produto detalheJson(@PathVariable("id") Integer id) {
-		return dao.findById(id);
-	}
-	*/
+
+	/*
+	 * Retorno Json
+	 * 
+	 * @RequestMapping("/{id}")
+	 * 
+	 * @ResponseBody public Produto detalheJson(@PathVariable("id") Integer id)
+	 * { return dao.findById(id); }
+	 */
 
 }
