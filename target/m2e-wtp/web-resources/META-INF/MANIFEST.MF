@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: dbaldani
 Build-Jdk: 1.8.0_111
+=======
+Built-By: wellington
+Build-Jdk: 1.8.0_51
+>>>>>>> 598361abe5f82a8af5d3999097a11714db41411b
 Created-By: Maven Integration for Eclipse
 
