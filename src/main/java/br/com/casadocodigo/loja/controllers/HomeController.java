@@ -36,7 +36,7 @@ public class HomeController {
 	}
 	@Transactional
 	@ResponseBody
-	@RequestMapping("/url-magica-maluca-oajksfbvad6584i57j54f9684nvi658efnoewfmnvowefnoeijn")
+	@RequestMapping("/url-magica-maluca")
 	public String urlMagicaMaluca() {
 	    Usuario usuario = new Usuario(); 
 	    usuario.setNome("Admin");
