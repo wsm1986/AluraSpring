@@ -19,21 +19,20 @@ public class JPAConfiguration {
 
 	
 	
-    @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
-        LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-
-        factoryBean.setJpaVendorAdapter(vendorAdapter);
-        factoryBean.setDataSource(dataSource);
-
-        Properties props = additionalProperties();
-
-        factoryBean.setJpaProperties(props);
-        factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
-
-        return factoryBean;
-    }
+	@Bean
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory(
+			DataSource dataSource, Properties additionalProperties) {
+		LocalContainerEntityManagerFactoryBean factoryBean = 
+				new LocalContainerEntityManagerFactoryBean();
+		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
+		factoryBean.setDataSource(dataSource);
+		
+		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+		factoryBean.setJpaVendorAdapter(vendorAdapter);
+		factoryBean.setJpaProperties(additionalProperties);
+		
+		return factoryBean;
+	}
 	
 	@Bean
 	public DataSource dataSource(){
