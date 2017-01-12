@@ -15,15 +15,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 public class Usuario implements UserDetails {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
+
 	@Id
 	private String email;
-	private String nome;
+
 	private String senha;
-	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
+
+	private String nome;
+
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	private List<Role> roles = new ArrayList<Role>();
 
 	public String getEmail() {
@@ -34,20 +36,20 @@ public class Usuario implements UserDetails {
 		this.email = email;
 	}
 
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public String getSenha() {
 		return senha;
 	}
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public List<Role> getRoles() {
