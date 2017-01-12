@@ -6,7 +6,7 @@
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags" %>
 
-<tags:pageTemplate titulo="${produto.titulo}">
+<%@ include file="/WEB-INF/views/cabecalho.jsp" %>
 
     <article id="${produto.id}">
         <header id="product-highlight" class="clearfix">
@@ -51,4 +51,4 @@
         </div>
     </article>    
 
-</tags:pageTemplate>
+<%@ include file="/WEB-INF/views/rodape.jsp" %>

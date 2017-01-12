@@ -1,4 +1,4 @@
-<%@ tag language="java" pageEncoding="ISO-8859-1"%>
+<%@ tag language="java" pageEncoding="UTF-8"%>
 
 <%@ attribute name="titulo" required="true" %>
 <%@ attribute name="bodyClass" required="false" %>
@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <title>${titulo} - Casa do Código</title>
+    <title>${titulo} - Casa do CÃ³digo</title>
 
     <!-- imports de css aqui -->
 </head>
