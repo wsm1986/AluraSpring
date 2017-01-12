@@ -19,16 +19,17 @@ public class UsuarioDAO implements UserDetailsService {
 	private EntityManager manager;
 
 	public UserDetails loadUserByUsername(String email) {
-		List<Usuario> usuarios = manager
-				.createQuery("select u from Usuario u where u.email = :email",
-						Usuario.class).setParameter("email", email)
-				.getResultList();
+		List<Usuario> usuarios = manager.createQuery("select u from Usuario u where u.email = :email", Usuario.class)
+				.setParameter("email", email).getResultList();
 
 		if (usuarios.isEmpty()) {
-			throw new UsernameNotFoundException("O usuário " + email
-					+ " não foi encontrado");
+			throw new UsernameNotFoundException("O usuário " + email + " não foi encontrado");
 		}
 
 		return usuarios.get(0);
+	}
+
+	public void gravar(Usuario usuario) {
+		manager.persist(usuario);
 	}
 }

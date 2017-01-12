@@ -13,8 +13,10 @@ public class Role implements GrantedAuthority {
 	@Id
 	private String nome;
 
-	// getters and setters
 
+	public Role(String nome) {
+		this.nome = nome;
+	}
 	@Override
 	public String getAuthority() {
 		return this.nome;
@@ -23,6 +25,8 @@ public class Role implements GrantedAuthority {
 	public String getNome() {
 		return nome;
 	}
+
+
 
 	public void setNome(String nome) {
 		this.nome = nome;
