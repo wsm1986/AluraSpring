@@ -43,42 +43,30 @@
 </head>
 <body>
 
+  <header id="layout-header">
+		<div class="clearfix container">
+			<a href="/" id="logo">
+			</a>
+			<div id="header-content">
+				<nav id="main-nav">
+					
+					<ul class="clearfix">
+						<li>         <a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow"> 
+                            Carrinho ( ${carrinhoCompras.quantidade} )
+                        </a></li>
 
-<header id="layout-header">
-    <div class="clearfix container">
-         <a href="${s:mvcUrl('CCC#itens').build()}"  id="logo">
-            <img src="https://cdn.rawgit.com/alura-cursos/spring-mvc-i-criando-aplicacoes-web-master/master/src/main/webapp/resources/imagens/cdc-logo.svg" />
-        </a>
-        <div id="header-content">
-            <nav id="main-nav">
-                <ul class="clearfix">
-                    <li>
-                        <a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow"> 
-                           <s:message code="menu.carrinho" arguments="${carrinhoCompras.quantidade}" />
-                        </a>
-                    </li>
-					<li>
-						<a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">
-							<fmt:message key="menu.sobre" />
-						</a>
-					</li>
-					<li>
-						<a href="?locale=pt" rel="nofollow"> 
-							<fmt:message key="menu.pt" />
-						</a>
-					</li>
+						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
 
-					<li>
-						<a href="?locale=en_UR" rel="nofollow"> 
-							<fmt:message key="menu.en" />
-						</a>
-					</li>
-				</ul>
-            </nav>
-        </div>
-    </div>
-</header>
-<nav class="categories-nav">
+						<li>
+						    <a href="?locale=en_UR" rel="nofollow">   <fmt:message key="menu.en"/>	</a>
+
+						<li><a href="?locale=pt" rel="nofollow">   <fmt:message key="menu.pt"/>	</a>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<nav class="categories-nav">
     <ul class="container">
         <li class="category">
             <a href="http://www.casadocodigo.com.br">
@@ -122,4 +110,5 @@
         </li>
     </ul>
 </nav>
+
 			
