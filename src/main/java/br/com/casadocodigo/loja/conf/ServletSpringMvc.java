@@ -38,10 +38,10 @@ public class ServletSpringMvc extends
 	protected void customizeRegistration(Dynamic registration) {
 		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
-	@Override
+	/*@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 	    super.onStartup(servletContext);
 	    servletContext.addListener(new RequestContextListener());
 	    servletContext.setInitParameter("spring.profiles.active", "dev");
-	}
+	}*/
 }
