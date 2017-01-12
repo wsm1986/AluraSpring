@@ -35,6 +35,7 @@ public class JPAConfiguration {
 	}
 	
 	@Bean
+	@Profile("dev")
 	public DataSource dataSource(){
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("wmoreira");
@@ -53,34 +54,6 @@ public class JPAConfiguration {
 	    props.setProperty("hibernate.hbm2ddl.auto", "update");
 	    return props;
 	}
-	/*@Bean
-	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-
-		JpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
-
-		factoryBean.setJpaVendorAdapter(jpaVendorAdapter);
-
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setUsername("wmoreira");
-		dataSource.setPassword("well1986");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo");
-		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-
-		factoryBean.setDataSource(dataSource);
-
-		Properties props = new Properties();
-		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
-		props.setProperty("hibernate.show_sql", "true");
-		props.setProperty("hibernate.hbm2ddl.auto", "update");
-
-		factoryBean.setJpaProperties(props);
-
-		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
-
-		return factoryBean;
-
-	}*/
 
 	@Bean
 	public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
