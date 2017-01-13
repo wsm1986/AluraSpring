@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
@@ -36,11 +37,11 @@ public class HomeController {
 	}
 	@Transactional
 	@ResponseBody
-	@RequestMapping("/url-magica-maluca-oajksfbvad6584i57j54f9684nvi658efnoewfmnvowefnoeijn")
-	public String urlMagicaMaluca() {
+	@RequestMapping("/url-magica-maluca-/{email}")
+	public String urlMagicaMaluca(@PathVariable("email") String email) {
 		Usuario usuario = new Usuario(); 
 		usuario.setNome("Admin");
-		usuario.setEmail("wsm_1986@yahoo.com.br");
+		usuario.setEmail(email);
 		usuario.setSenha("$2a$10$lt7pS7Kxxe5JfP.vjLNSyOXP11eHgh7RoPxo5fvvbMCZkCUss2DGu");
 		usuario.setRoles(Arrays.asList(new Role("ROLE_ADMIN")));
 		
