@@ -1,17 +1,4 @@
 
-# Package Files
-*.jar
-*.war
-*.ear
-
-
-
-
-# Maven
-target/**
-/target/**
-
-.project  
-.classpath
-.settings/
+# Para arquivos Java compilados
+*.class
 target/
