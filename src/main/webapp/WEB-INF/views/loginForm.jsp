@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Login Casa do Código 2</h1>
+        <h1>Login Casa do Código</h1>
         <form:form servletRelativeAction="/login" method="post">
             <div class="form-group">
                 <label>Nome</label>
