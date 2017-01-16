@@ -32,7 +32,7 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoDAO dao;
 
-	@Autowired
+	@Autowired   
 	private FileSaver savar;
 
 	// Metodo responsavel para habilitar o nosso validador para a classe Produto

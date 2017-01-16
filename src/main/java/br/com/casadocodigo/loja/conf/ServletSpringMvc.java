@@ -6,6 +6,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
 
+import org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -31,20 +32,20 @@ public class ServletSpringMvc extends AbstractAnnotationConfigDispatcherServletI
 	protected Filter[] getServletFilters() {
 		CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
 		encodingFilter.setEncoding("UTF-8");
-
-		return new Filter[] { encodingFilter };
+		//OpenEntityManagerInViewFilter  - Lazy Initialization Corrigi esse erro 
+		return new Filter[] { encodingFilter, new OpenEntityManagerInViewFilter() };
 	}
 
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
 		registration.setMultipartConfig(new MultipartConfigElement(""));
 	}
-/*
+
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		super.onStartup(servletContext);
 		servletContext.addListener(new RequestContextListener());
-		servletContext.setInitParameter("spring.profiles.active", "dev");
-	}*/
+		servletContext.setInitParameter("spring.profiles.active", "prod");
+	}
 
 }

@@ -10,3 +10,8 @@
 # Maven
 target/**
 /target/**
+
+.project  
+.classpath
+.settings/
+target/

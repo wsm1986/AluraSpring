@@ -24,5 +24,7 @@ public class Preco {
 	public void setValor(BigDecimal valor) {
 		this.valor = valor;
 	}
-
+	public String toString() {
+	    return this.tipo.name() + " - " + this.valor;
+	}
 }
